@@ -1,0 +1,1577 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="工作流简述, Hexo">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>工作流简述 | Hexo</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.1.1"></head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Hexo</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>Index</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>Tags</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>Categories</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>Archives</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>About</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>Contact</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>Friends</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="Search" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Hexo</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			Index
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			Tags
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			Categories
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			Archives
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			About
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			Contact
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			Friends
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">工作流简述</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                          <div class="article-tag">
+                            <span class="chip bg-color">No tag</span>
+                          </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
+                    2020-09-05
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h3 id="Action相关方法"><a href="#Action相关方法" class="headerlink" title="Action相关方法"></a>Action相关方法</h3><ul>
+<li><h4 id="工作流启动"><a href="#工作流启动" class="headerlink" title="工作流启动"></a>工作流启动</h4><ul>
+<li><pre><code class="java">@Override
+    public String doWorkflowStartup() &#123;
+        // TODO Auto-generated method stub
+        return super.doWorkflowStartup();
+    &#125;
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- ##### 工作流编辑页面打开</span><br><span class="line"></span><br><span class="line">  - &#96;&#96;&#96;java</span><br><span class="line">    @Override</span><br><span class="line">    	public String doWorkflowEdit() &#123;</span><br><span class="line">    		&#x2F;&#x2F; TODO Auto-generated method stub</span><br><span class="line">    		return super.doWorkflowEdit();</span><br><span class="line">    	&#125;</span><br></pre></td></tr></table></figure></code></pre>
+</li>
+</ul>
+</li>
+<li><h5 id="工作流查看页面打开方法入口"><a href="#工作流查看页面打开方法入口" class="headerlink" title="工作流查看页面打开方法入口"></a>工作流查看页面打开方法入口</h5><ul>
+<li><pre><code class="java">@Override
+    public String doWorkflowOpen() &#123;
+        // TODO Auto-generated method stub
+        return super.doWorkflowOpen();
+    &#125;
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- ##### 工作流执行（操作）方法入口</span><br><span class="line"></span><br><span class="line">  - &#96;&#96;&#96;java</span><br><span class="line">    @Override</span><br><span class="line">    	public String doWorkflowExecute() &#123;</span><br><span class="line">    		&#x2F;&#x2F; TODO Auto-generated method stub</span><br><span class="line">    		return super.doWorkflowExecute();</span><br><span class="line">    	&#125;</span><br></pre></td></tr></table></figure></code></pre>
+</li>
+</ul>
+</li>
+<li><h5 id="工作流监控方法执行入口"><a href="#工作流监控方法执行入口" class="headerlink" title="工作流监控方法执行入口"></a>工作流监控方法执行入口</h5><ul>
+<li><pre><code class="java">@Override
+    public String doWorkflowWatchExecute() &#123;
+        getOaFiledispatchZzService().doWorkflowWatchExecute(getModel());
+        return SUCCESS;
+    &#125;
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- ##### 待处理</span><br><span class="line"></span><br><span class="line">  - &#96;&#96;&#96;java</span><br><span class="line">    @Override</span><br><span class="line">    	public String getPendingList() &#123;</span><br><span class="line">    		List&lt;OaFiledispatchZz&gt; beans &#x3D; getOaFiledispatchZzService().getPendingList(getModel());</span><br><span class="line">    		this.getModel().setResult(beans);</span><br><span class="line">    		return SUCCESS;</span><br><span class="line">    	&#125;</span><br></pre></td></tr></table></figure></code></pre>
+</li>
+</ul>
+</li>
+<li><h5 id="在处理"><a href="#在处理" class="headerlink" title="在处理"></a>在处理</h5><ul>
+<li><pre><code class="java">/**
+     * @Description 已处理列表
+     */
+     @Override
+    public String getDealList() &#123;
+        // TODO Auto-generated method stub
+         return super.getDealList();
+    &#125;
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- ##### 已处理</span><br><span class="line"></span><br><span class="line">  - &#96;&#96;&#96;java</span><br><span class="line">    @Override</span><br><span class="line">    	public String getDoneList() &#123;</span><br><span class="line">    		&#x2F;&#x2F; TODO Auto-generated method stub</span><br><span class="line">    		return super.getDoneList();</span><br><span class="line">    	&#125;</span><br></pre></td></tr></table></figure></code></pre>
+</li>
+</ul>
+</li>
+<li><h5 id="工作流监控方法入口"><a href="#工作流监控方法入口" class="headerlink" title="工作流监控方法入口"></a>工作流监控方法入口</h5><ul>
+<li><pre><code class="java">@Override
+    public String doWorkflowWatchExecute() &#123;
+        getOaFiledispatchZzService().doWorkflowWatchExecute(getModel());
+        return SUCCESS;
+    &#125;
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- ##### 监控未完成</span><br><span class="line"></span><br><span class="line">  - &#96;&#96;&#96;java</span><br><span class="line">    @Override</span><br><span class="line">    	public String getAllUnfinishJobList() &#123;</span><br><span class="line">    		List&lt;OaFiledispatchZz&gt; beans &#x3D; getOaFiledispatchZzService().getAllUnfinishJobList(getModel());</span><br><span class="line">    		getModel().setResult(beans);</span><br><span class="line">    		return SUCCESS;</span><br><span class="line">    	&#125;</span><br></pre></td></tr></table></figure></code></pre>
+</li>
+</ul>
+</li>
+<li><h5 id="监控已完成"><a href="#监控已完成" class="headerlink" title="监控已完成"></a>监控已完成</h5><ul>
+<li><pre><code class="java">@Override
+    public String getAllFinishedJobList() &#123;
+        List&lt;OaFiledispatchZz&gt; beans = getOaFiledispatchZzService().getAllFinishedJobList(getModel());
+        getModel().setResult(beans);
+        return SUCCESS;
+    &#125;
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- ##### 回收站</span><br><span class="line"></span><br><span class="line">  &#96;&#96;&#96;java</span><br><span class="line">  public String getAllRecycleList() &#123;</span><br><span class="line">  		List&lt;OaFiledispatchZz&gt; beans &#x3D; getOaFiledispatchZzService().getAllRecycleList(getModel());</span><br><span class="line">  		getModel().setResult(beans);</span><br><span class="line">  		return SUCCESS;</span><br><span class="line">  	&#125;</span><br></pre></td></tr></table></figure></code></pre>
+</li>
+</ul>
+</li>
+<li><h5 id="加盖公章-需要获得源文件信息"><a href="#加盖公章-需要获得源文件信息" class="headerlink" title="加盖公章  需要获得源文件信息"></a>加盖公章  需要获得源文件信息</h5><ul>
+<li><pre><code class="java">public String getTGstamp() &#123;
+        OaFiledispatchZz bean = this.getOaFiledispatchZzService().getOaFiledispatchByUuid(getModel());
+        getModel().getDataWrapper().setModel(bean);
+        OaAttachment officeFile = (OaAttachment) bean.getObjMap().get(&quot;officeFile&quot;);
+        if(null != officeFile)&#123;
+            bean.getStrMap().put(&quot;officeFileUuid&quot;, officeFile.getOaatmUuid());
+            bean.getStrMap().put(&quot;officeFileName&quot;, officeFile.getOaatmFileName());
+            bean.getStrMap().put(&quot;officeFileServerPath&quot;, officeFile.getOaatmServerPath());
+        &#125;else &#123;
+            bean.getStrMap().put(&quot;officeFileUuid&quot;, &quot;&quot;);
+            bean.getStrMap().put(&quot;officeFileName&quot;, &quot;&quot;);
+            bean.getStrMap().put(&quot;officeFileServerPath&quot;, &quot;&quot;);
+        &#125;
+        getModel().setResult(bean);
+        return SUCCESS;
+    &#125;
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- ##### set当前业务接口</span><br><span class="line"></span><br><span class="line">  - &#96;&#96;&#96;java</span><br><span class="line">    @Autowired</span><br><span class="line">    	public void setOaFiledispatchZzService(IOaFiledispatchZzService oaFiledispatchZzService) &#123;</span><br><span class="line">    		super.setCrudBaseService(oaFiledispatchZzService);</span><br><span class="line">    	&#125;</span><br></pre></td></tr></table></figure></code></pre>
+</li>
+</ul>
+</li>
+<li><h5 id="get当前业务接口"><a href="#get当前业务接口" class="headerlink" title="get当前业务接口"></a>get当前业务接口</h5><ul>
+<li><pre><code class="java">public IOaFiledispatchZzService getOaFiledispatchZzService() &#123;
+        return (IOaFiledispatchZzService) super.getCrudBaseService();
+    &#125;
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### ServiceImpl相关方法</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#### 工作流开始前后相关方法</span><br><span class="line"></span><br><span class="line">- ##### 该方法在工作流启动的时候调用，在将数据保存到业务表之前执行。该方法一般用来设置业务对象的一些属性，从而保存到数据库中。</span><br><span class="line"></span><br><span class="line">&#96;&#96;&#96;java</span><br><span class="line">@Override</span><br><span class="line">	protected void wfStartupBfSaveExtendApplication(OaFiledispatchZz model) &#123;</span><br><span class="line">		&#x2F;&#x2F; 设置记录状态为0</span><br><span class="line">		model.setOafdStatus(PubStatusEnum.FLOW_INVALID.getCode());</span><br><span class="line">		&#x2F;&#x2F; 通过用户id获取用户各级部门</span><br><span class="line">		Map&lt;String,String&gt; depMap &#x3D; pubParseScopeService.getDepByCoreAccountCommon(model.getOperator().getUuid());</span><br><span class="line">		&#x2F;*从map集合中获取数据set到model中*&#x2F;</span><br><span class="line">		&#x2F;&#x2F; set所属机构uuid</span><br><span class="line">		model.setOafdOrguuid(depMap.get(AppConstant.DEPUUID));</span><br><span class="line">		&#x2F;&#x2F; set所属机构名字</span><br><span class="line">		model.setOafdOrgname(depMap.get(AppConstant.DEPNAME));</span><br><span class="line">		&#x2F;&#x2F; set创建者</span><br><span class="line">		model.setOafdCusr(model.getOperator().getCractUuid());</span><br><span class="line">		&#x2F;&#x2F; set创建者名字</span><br><span class="line">		model.setOafdCusrname(model.getOperator().getCractName());</span><br><span class="line">		&#x2F;&#x2F; set发文单位</span><br><span class="line">		model.setOafdFilesenddep(depMap.get(AppConstant.DEPUUID));</span><br><span class="line">		&#x2F;&#x2F; set发文单位名字</span><br><span class="line"></span><br><span class="line">		model.setOafdFilesenddepname(depMap.get(AppConstant.DEPNAME));</span><br><span class="line">		&#x2F;&#x2F; set拟稿人</span><br><span class="line">		model.setOafdFiledrafter(model.getOperator().getCractName());</span><br><span class="line">		&#x2F;&#x2F; set拟稿单位名称</span><br><span class="line">		model.setOafdFiledraftdepname(model.getOperator().getCoreOrgLoginAs().getCrorgFullName());</span><br><span class="line">		&#x2F;&#x2F; set拟稿日期</span><br><span class="line">		model.setOafdFiledraftdate(new Date());</span><br><span class="line">		&#x2F;&#x2F; set校对人</span><br><span class="line">		model.setOafdFilecheck(model.getOperator().getCractUuid());</span><br><span class="line">		&#x2F;&#x2F; set校对人名字</span><br><span class="line">		model.setOafdFilecheckname(model.getOperator().getCractName());</span><br><span class="line"></span><br><span class="line">		super.wfStartupBfSaveExtendApplication(model);</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+
+
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><h5 id="该方法在工作流启动的时候调用，在将数据保存到业务表之后执行。该方法一般用来设置工作流启动后返回到页面的一些属性，比如strMap的设置等。"><a href="#该方法在工作流启动的时候调用，在将数据保存到业务表之后执行。该方法一般用来设置工作流启动后返回到页面的一些属性，比如strMap的设置等。" class="headerlink" title="该方法在工作流启动的时候调用，在将数据保存到业务表之后执行。该方法一般用来设置工作流启动后返回到页面的一些属性，比如strMap的设置等。"></a>该方法在工作流启动的时候调用，在将数据保存到业务表之后执行。该方法一般用来设置工作流启动后返回到页面的一些属性，比如strMap的设置等。</h5></li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">wfStartupAfSaveExtendApplication</span><span class="params">(OaFiledispatchZz model)</span> </span>&#123;</span><br><span class="line">   <span class="comment">// TODO Auto-generated method stub</span></span><br><span class="line">   <span class="keyword">super</span>.wfStartupAfSaveExtendApplication(model);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="工作流打开页面及后续操作相关方法"><a href="#工作流打开页面及后续操作相关方法" class="headerlink" title="工作流打开页面及后续操作相关方法"></a>工作流打开页面及后续操作相关方法</h4><ul>
+<li><h5 id="该方法在工作流页面打开的时候扩展执行，包括编辑页面和查看页面的打开"><a href="#该方法在工作流页面打开的时候扩展执行，包括编辑页面和查看页面的打开" class="headerlink" title="该方法在工作流页面打开的时候扩展执行，包括编辑页面和查看页面的打开"></a>该方法在工作流页面打开的时候扩展执行，包括编辑页面和查看页面的打开</h5></li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">doWorkflowOpenExtendApplication</span><span class="params">(OaFiledispatchZz model)</span> </span>&#123;</span><br><span class="line">   <span class="comment">// 获取历史流程流转记录</span></span><br><span class="line">   List&lt;WfHistory&gt; hislist = wfHistoryService.getAllHistorysByItemID(model.getUuid());</span><br><span class="line">   model.getObjMap().put(<span class="string">&quot;historyList&quot;</span>, hislist);</span><br><span class="line"></span><br><span class="line">   <span class="comment">// 进行Office控件的打开</span></span><br><span class="line">   OaAttachment oaAttachment = <span class="keyword">new</span> OaAttachment();</span><br><span class="line">   oaAttachment.setMtmBetaUuid(model.getUuid());</span><br><span class="line">   <span class="comment">// 将发文对象UUID从附件表中查找出OFFICE软件（有且只有一个OFFICE附件）</span></span><br><span class="line">   OaAttachment officeFile = oaAttachmentService.getOfficeFile(oaAttachment);</span><br><span class="line">   <span class="keyword">if</span> (officeFile != <span class="keyword">null</span>) &#123;</span><br><span class="line">      <span class="comment">//附件名称</span></span><br><span class="line">      model.getStrMap().put(<span class="string">&quot;officeFileNameOs&quot;</span>, officeFile.getOaatmFileName());</span><br><span class="line">      model.getObjMap().put(<span class="string">&quot;officeFile&quot;</span>, officeFile);</span><br><span class="line">   &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="comment">// 获取模版信息</span></span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   <span class="comment">//签批意见</span></span><br><span class="line">   List&lt;OaHandleopin&gt; imgopinList = oaHandleopinService.getPictureByItemuuid(model.getOafdUuid());</span><br><span class="line">   model.getObjMap().put(<span class="string">&quot;imgopinList&quot;</span>, imgopinList);</span><br><span class="line"></span><br><span class="line">   <span class="keyword">super</span>.doWorkflowOpenExtendApplication(model);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li><h5 id="该方法在工作流进行页面保存的时候额外开发的方法接口。要求前台strMap-workflowType-”actionSaveActivity”"><a href="#该方法在工作流进行页面保存的时候额外开发的方法接口。要求前台strMap-workflowType-”actionSaveActivity”" class="headerlink" title="该方法在工作流进行页面保存的时候额外开发的方法接口。要求前台strMap.workflowType=”actionSaveActivity”"></a>该方法在工作流进行页面保存的时候额外开发的方法接口。要求前台strMap.workflowType=”actionSaveActivity”</h5></li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">actionSaveActivityExtendApplication</span><span class="params">(OaFiledispatchZz model)</span> </span>&#123;</span><br><span class="line">   <span class="comment">// 获得是否有标题 是否有状态 以及 状态的值是否为无效(&quot;0&quot;) 的 &amp;&amp;</span></span><br><span class="line">   <span class="comment">// 若有标题和状态以及状态为无效(&quot;0&quot;) 则is为true</span></span><br><span class="line">   <span class="keyword">boolean</span> is = StringUtils.hasText(model.getOafdSubjectos()) &amp;&amp; (StringUtils.hasText(model.getOafdStatus()) &amp;&amp; PubStatusEnum.FLOW_INVALID.getCode().equals(model.getOafdStatus()));</span><br><span class="line">   <span class="keyword">if</span>(is)&#123;</span><br><span class="line">      <span class="comment">// 进行状态的改变 无效变有效</span></span><br><span class="line">      model.setOafdStatus(PubStatusEnum.FLOW_VALID.getCode());</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="comment">// 获得流水号标识</span></span><br><span class="line">   String serialuuid = model.getStrMap().get(<span class="string">&quot;serialuuid&quot;</span>);</span><br><span class="line">   <span class="keyword">if</span> (StringUtils.hasText(serialuuid)) &#123; <span class="comment">// 判断是否有值</span></span><br><span class="line">      CoreSerialNumber coreSerialNumber = <span class="keyword">new</span> CoreSerialNumber();</span><br><span class="line">      <span class="comment">// model.getOafdSerialuuid()获得流水号标识   set标识UUID</span></span><br><span class="line">      coreSerialNumber.setCrsnoUuid(model.getOafdSerialuuid());</span><br><span class="line">      <span class="comment">// model.getOafdFileno()获得文件编号   set当前流水号</span></span><br><span class="line">      coreSerialNumber.setCrsnoCurrentNumber(Integer.parseInt(model.getOafdFileno()));</span><br><span class="line">      coreSerialNumberService.getAndUpdateSerialNumber(coreSerialNumber);</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   <span class="comment">// 保存OFFICE文稿</span></span><br><span class="line">   oaAttachmentService.saveOrUpdateOfficeFile(model);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li><h5 id="该方法提供给前台action类型操作，要求前台strMap-workflowType的值要以”action”开头"><a href="#该方法提供给前台action类型操作，要求前台strMap-workflowType的值要以”action”开头" class="headerlink" title="该方法提供给前台action类型操作，要求前台strMap.workflowType的值要以”action”开头"></a>该方法提供给前台action类型操作，要求前台strMap.workflowType的值要以”action”开头</h5><ul>
+<li><pre><code class="java">@Override
+    protected void actionExtendApplication(OaFiledispatchZz model, String workflowType) &#123;
+        // 补发进行的操作
+        if (AppConstant.ACTION_ADD_SEND_UNIT.equals(workflowType)) &#123;
+            /* 将补发范围加到正式发文范围内*/
+            // 获得发送范围
+            String sendscope = model.getOafdSendscope();
+            // 获得发送范围名字
+            String sendscopename = model.getOafdSendscopename();
+
+            sendscope = sendscope + &quot;,&quot; + model.getStrMap().get(&quot;addScopeuuid&quot;).toString();
+            sendscopename = sendscopename + &quot;,&quot; + model.getStrMap().get(&quot;addScopename&quot;).toString();
+            // 重新set发送范围
+            model.setOafdSendscope(sendscope);
+            model.setOafdSendscopename(sendscopename);
+            // 进行数据库的更新
+            this.getMyBatisDaoManager().update(model);
+
+            // 记录补发流转信息
+            WfHistory history = new WfHistory();
+            // set项目案件UUID
+            history.setWfhistoryItemuuid(model.getOafdUuid());
+            // set当前处理用户   model.getOperator().getCractName()获得账户名称[登录用]  model.getOperator()获得账户对象
+            history.setWfhistoryCurprocessor(model.getOperator().getCractName());
+            // set后续处理业务
+            history.setWfhistoryNextprocessor(model.getStrMap().get(&quot;addScopename&quot;).toString());
+            // set当前执行动作
+            history.setWfhistoryCurrentaction(&quot;补发&quot;);
+            // set当前活动名称
+            history.setWfhistoryCuractivityname(&quot;结束&quot;);
+
+            this.getMyBatisDaoManager().save(history);
+
+            /*对补发范围进行解析 外单位找到对应switchfile对象，调用它们的接口进行补发操作。*/
+            // 交换中心文件(OaSwtichcenterFile)模型对象
+            OaSwitchcenterFile switchFile = new OaSwitchcenterFile();
+            // set源文件UUID
+            switchFile.setOascfSourceuuid(model.getOafdUuid());
+            OaSwitchcenterFile newSwitchfile = oaSwitchcenterFileService.getOaSwitchcenterFileBySourceuuid(switchFile);
+            newSwitchfile.getStrMap().put(&quot;addScopeuuid&quot;, model.getStrMap().get(&quot;addScopeuuid&quot;).toString());
+            newSwitchfile.getStrMap().put(&quot;addScopename&quot;, model.getStrMap().get(&quot;addScopename&quot;).toString());
+            newSwitchfile.getStrMap().put(&quot;currentActionOs&quot;, &quot;actionAddSend&quot;);
+            newSwitchfile.getStrMap().put(&quot;subjectos&quot;, model.getOafdSubjectos());
+            newSwitchfile.getStrMap().put(&quot;printno&quot;, model.getStrMap().get(&quot;printno&quot;));
+            newSwitchfile.getStrMap().put(AppConstant.STR_SMS, model.getStrMap().get(&quot;addSms&quot;));
+            newSwitchfile.getStrMap().put(AppConstant.STR_DD, model.getStrMap().get(&quot;addDd&quot;));
+            oaSwitchcenterFileService.doDocumentExecute(newSwitchfile);
+        &#125;else if (AppConstant.ACTION_FALSE_DELETE.equals(workflowType)) &#123;
+            // 工作流批量删除(假删除)
+            actionFalseDeleteApplication(model);
+        &#125;
+    &#125;
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- ##### 其方法中调用的自定义方法</span><br><span class="line"></span><br><span class="line">  - &#96;&#96;&#96;java</span><br><span class="line">    private void actionFalseDeleteApplication(OaFiledispatchZz model)&#123;</span><br><span class="line">    		&#x2F;&#x2F;删除消息</span><br><span class="line">    		WfMessage wfMessage &#x3D; new WfMessage();</span><br><span class="line">    		wfMessage.setWfmessageItemuuid(model.getUuid());</span><br><span class="line">    		wfMessageService.removeAllByItemuuid(wfMessage);</span><br><span class="line">    		&#x2F;&#x2F;假删除</span><br><span class="line">    		model.setOafdStatus(AppConstant.NUM_TWO);</span><br><span class="line">    		this.getMyBatisDaoManager().update(model);</span><br><span class="line">    	&#125;</span><br></pre></td></tr></table></figure>
+
+
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="工作流执行前后相关方法"><a href="#工作流执行前后相关方法" class="headerlink" title="工作流执行前后相关方法"></a>工作流执行前后相关方法</h4><ul>
+<li><h5 id="工作流执行之前方法"><a href="#工作流执行之前方法" class="headerlink" title="工作流执行之前方法"></a>工作流执行之前方法</h5><ul>
+<li><pre><code class="java">@Override
+    protected void wfQueryRouteExtendApplication(OaFiledispatchZz model,WfEngine wfengine, String currentAction) &#123;
+        // 获得当前流程名字
+        String workflowApplication = this.getWorkflowApplicationName(model);
+        // 进行流程名字判断
+        if (AppConstant.FILED_IS_PATCH_ZZ.equals(workflowApplication))&#123;
+            // 执行自定义方法
+            workflowQueryRouteApplicationStandard(model,wfengine,currentAction);
+        &#125;else &#123;
+            LOG.error(&quot;未指定相应的工作流&quot;);
+        &#125;
+    &#125;
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- ###### 其方法调用的自定义方法</span><br><span class="line"></span><br><span class="line">  - &#96;&#96;&#96;java</span><br><span class="line">    @Override</span><br><span class="line">    	public void workflowQueryRouteApplicationStandard(OaFiledispatchZz model, WfEngine engine, String currentAction) &#123;</span><br><span class="line">    		&#x2F;&#x2F; 获取引擎对象</span><br><span class="line">    		engine &#x3D; wfEngineService.getWfEngineByItemUUID(model.getUuid());</span><br><span class="line">    		&#x2F;&#x2F; 获取当前活动名称</span><br><span class="line">    		String currentActivityname &#x3D; engine.getWfengineActivityname();</span><br><span class="line">    		&#x2F;&#x2F; 获取前活动名称</span><br><span class="line">    		String preActivityname &#x3D; engine.getWfenginePreactivityname();</span><br><span class="line">    </span><br><span class="line">    		if (AppConstant.WORKFLOW_REROUTE.equals(model.getStrMap().get(AppConstant.WORKFLOW_TYPE))) &#123;</span><br><span class="line">    			&#x2F;&#x2F; 进行工作流流转类型的判断</span><br><span class="line">    			&#x2F;&#x2F; 如果重新流转，在流转前的engine对象传递给流转后的方法</span><br><span class="line">    			model.getObjMap().put(&quot;preEngine&quot;, engine);</span><br><span class="line">    		&#125;</span><br><span class="line">    </span><br><span class="line">    		&#x2F;&#x2F; 设置领导签发签批人</span><br><span class="line">    		if (AppConstant.ISSUED_BY_LEADERS.equals(currentActivityname)) &#123;</span><br><span class="line">    			model.setOafdFiledate(new Date());</span><br><span class="line">    		&#125;</span><br><span class="line">    </span><br><span class="line">    		&#x2F;&#x2F;设置校对日期</span><br><span class="line">    		if (AppConstant.ELECTRONIC_PROOFREADING.equals(currentActivityname)) &#123;</span><br><span class="line">    			model.setOafdFilecheckdate(new Date());</span><br><span class="line">    		&#125;</span><br><span class="line">    </span><br><span class="line">    		&#x2F;&#x2F;设置文印日期</span><br><span class="line">    		if (AppConstant.LITERARY_SEAL.equals(currentActivityname)) &#123;</span><br><span class="line">    			if(model.getOafdFileprintdate() &#x3D;&#x3D; null)&#123;</span><br><span class="line">    				model.setOafdFileprintdate(new Date());</span><br><span class="line">    			&#125;</span><br><span class="line">    		&#125;</span><br><span class="line">    </span><br><span class="line">    		&#x2F;** 作为撤销发文之前进行的操作SSS *&#x2F;</span><br><span class="line">    		if (AppConstant.END.equals(currentActivityname)) &#123;</span><br><span class="line">    			workflowCancelApplication(model);</span><br><span class="line">    		&#125;</span><br><span class="line">    		&#x2F;** 作为撤销发文之前进行的操作EEE *&#x2F;</span><br><span class="line">    </span><br><span class="line">    		&#x2F;*内外会签进行的操作*&#x2F;</span><br><span class="line">    		if (AppConstant.OAFD_NUCLEAR_DRAFT.equals(currentActivityname)&amp;&amp;AppConstant.OAFD_SIGN.equals(currentAction))&#123;</span><br><span class="line">    			actionUndertakerQueryRouteApplication(model,currentActivityname,currentAction,engine);</span><br><span class="line">    		&#125;</span><br><span class="line">    		&#x2F;*发布内外范围进行的操作*&#x2F;</span><br><span class="line">    		if (&quot;发文&quot;.equals(currentActivityname)&amp;&amp;&quot;发布&quot;.equals(currentAction))&#123;</span><br><span class="line">    			parseInnerOuterSendScope(model, engine, currentAction);</span><br><span class="line">    		&#125;</span><br><span class="line">    	&#125;</span><br></pre></td></tr></table></figure>
+
+  - `workflowCancelApplication()`
+
+  - ```java
+    public void workflowCancelApplication(OaFiledispatchZz model) &#123;
+            /*删除文件库对应的实体实体和待办*/
+            // 初始化文件库对象
+            OaFileinner fileinner = new OaFileinner();
+            // set源文件uuid
+            fileinner.setOafiSourceuuid(model.getUuid());
+            // 查询 获得文件对象集合
+            List&lt;OaFileinner&gt; innerList = oaFileinnerService.getFileinnerBySourceuuid(fileinner);
+            for (OaFileinner inner : innerList) &#123;
+                /*删除之前接收人的代办（内部用户）*/
+                WfMessage message = new WfMessage();
+                // set项目UUID
+                message.setWfmessageItemuuid(inner.getOafiUuid());
+                wfMessageService.removeAllByItemuuid(message);
+                //this.getMyBatisDaoManager().remove(inner);
+                // set文件状态
+                inner.setOafiStatus(AppConstant.NUM_TWO);
+                this.getMyBatisDaoManager().update(inner);
+            &#125;
+
+            /*如果有到交换中心，删除对应实体和待办*/
+            // 初始化交换中心对象
+            OaSwitchcenterFile switchfile = new OaSwitchcenterFile();
+            // set源文件uuid
+            switchfile.setOascfSourceuuid(model.getUuid());
+            // 通过源文件uuid查询 获得交换中心对象
+            OaSwitchcenterFile findSwitchfile = oaSwitchcenterFileService.getOaSwitchcenterFileBySourceuuid(switchfile);
+            if (findSwitchfile != null) &#123;
+                //删除消息表
+                WfMessage message = new WfMessage();
+                // set项目uuid
+                message.setWfmessageItemuuid(findSwitchfile.getOascfUuid());
+                wfMessageService.removeAllByItemuuid(message);
+                //删除
+                //this.getMyBatisDaoManager().remove(findSwitchfile);
+                findSwitchfile.setOascfStatus(PubStatusEnum.CANACEL.getCode());
+                this.getMyBatisDaoManager().update(findSwitchfile);
+            &#125;
+
+            model.getStrMap().put(&quot;logApplicationName&quot;,&quot;发文&quot;);
+            model.getStrMap().put(&quot;logType&quot;,&quot;1&quot;);
+            model.getStrMap().put(&quot;logAction&quot;,&quot;撤回&quot;);
+            // 标题
+            model.getStrMap().put(&quot;logTitle&quot;,model.getOafdSubjectos());
+            // 发文单位名称
+            model.getStrMap().put(&quot;orgname&quot;,model.getOafdFilesenddepname());
+            // 发文单位
+            model.getStrMap().put(&quot;orguuid&quot;,model.getOafdFilesenddep());
+            // 创建OA日志
+            oaLogService.creatOaLog(model);
+        &#125;
+    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 内外会签进行的操作 &#96;actionUndertakerQueryRouteApplication()&#96;</span><br><span class="line"></span><br><span class="line">- &#96;&#96;&#96;java</span><br><span class="line">  public void actionUndertakerQueryRouteApplication(OaFiledispatchZz model,String currentActivityname,String currentAction, WfEngine engine)&#123;</span><br><span class="line">  		&#x2F;*拟办送领导阅示，需要给预办理科室共发送待办*&#x2F;</span><br><span class="line">  		&#x2F;&#x2F; 获取到内外会签的人员选择</span><br><span class="line">  		String oafdDepouterinner &#x3D; model.getStrMap().get(&quot;oafdDepouterinner&quot;);</span><br><span class="line">  		String oafdDepouterouter &#x3D; model.getStrMap().get(&quot;oafdDepouterouter&quot;);</span><br><span class="line">  		String useruuids &#x3D; &quot;&quot;;</span><br><span class="line">  </span><br><span class="line">  		&#x2F;&#x2F;内部会签</span><br><span class="line">  		if (StringUtils.hasText(oafdDepouterinner)) &#123;</span><br><span class="line">  			String[] uuids &#x3D; oafdDepouterinner.split(&quot;,&quot;);</span><br><span class="line">  			for (int i&#x3D; 0;i&lt;uuids.length;i++)&#123;</span><br><span class="line">  				String uuid &#x3D; uuids[i];</span><br><span class="line">  				CoreOrganization org &#x3D; new CoreOrganization();</span><br><span class="line">  				org.setCrorgUuid(uuid);</span><br><span class="line">  				org &#x3D; this.getMyBatisDaoManager().get(org,false);</span><br><span class="line">  				if (org !&#x3D; null)&#123;</span><br><span class="line">  					&#x2F;&#x2F;科室负责人</span><br><span class="line">  					List&lt;String&gt; strList &#x3D; pubParseScopeService.parserScopeToLeaderByDep(org.getCrorgUuid(), &quot;CheckinnerUuid&quot;);</span><br><span class="line">  					String checkinnerUuids &#x3D; PubUtils.listToString(strList);</span><br><span class="line">  					if (StringUtils.hasText(checkinnerUuids))&#123;</span><br><span class="line">  						if (StringUtils.hasText(useruuids))&#123;</span><br><span class="line">  							useruuids &#x3D; useruuids+ &quot;,&quot; + checkinnerUuids;</span><br><span class="line">  						&#125;else &#123;</span><br><span class="line">  							useruuids&#x3D;checkinnerUuids;</span><br><span class="line">  						&#125;</span><br><span class="line">  					&#125;</span><br><span class="line">  				&#125;</span><br><span class="line">  			&#125;</span><br><span class="line">  		&#125;</span><br><span class="line">  		&#x2F;&#x2F;外部会签</span><br><span class="line">  		if (StringUtils.hasText(oafdDepouterouter)) &#123;</span><br><span class="line">  			String[] uuids &#x3D; oafdDepouterouter.split(&quot;,&quot;);</span><br><span class="line">  			for (int i &#x3D; 0;i&lt;uuids.length;i++)&#123;</span><br><span class="line">  				String uuid &#x3D; uuids[i];</span><br><span class="line">  				CoreOrganization org &#x3D; new CoreOrganization();</span><br><span class="line">  				org.setCrorgUuid(uuid);</span><br><span class="line">  				org &#x3D; this.getMyBatisDaoManager().get(org,false);</span><br><span class="line">  				if (org!&#x3D; null)&#123;</span><br><span class="line">  					&#x2F;&#x2F;单位</span><br><span class="line">  					Map m &#x3D; pubOrgconfigService.getPubOrgconfig(org.getCrorgUuid());</span><br><span class="line">  					if (!CollectionUtils.isEmpty(m))&#123;</span><br><span class="line">  						if (m.get(&quot;FileReceiverUuid&quot;) !&#x3D; null &amp;&amp; !&quot;&quot;.equals(m.get(&quot;FileReceiverUuid&quot;).toString())) &#123;</span><br><span class="line">  							if (StringUtils.hasText(useruuids)) &#123;</span><br><span class="line">  								useruuids &#x3D; useruuids + &quot;,&quot; + m.get(&quot;FileReceiverUuid&quot;).toString();</span><br><span class="line">  							&#125; else &#123;</span><br><span class="line">  								useruuids &#x3D; m.get(&quot;FileReceiverUuid&quot;).toString();</span><br><span class="line">  							&#125;</span><br><span class="line">  						&#125;</span><br><span class="line">  					&#125;</span><br><span class="line">  				&#125;</span><br><span class="line">  			&#125;</span><br><span class="line">  		&#125;</span><br><span class="line">  		if (StringUtils.hasText(useruuids))&#123;</span><br><span class="line">  			model.setOafdDepouter(useruuids);</span><br><span class="line">  		&#125;</span><br><span class="line">  	&#125;</span><br></pre></td></tr></table></figure>
+
+  - 发布内外范围进行的操作 `parseInnerOuterSendScope()`
+
+  - ```java
+    private void parseInnerOuterSendScope(OaFiledispatchZz model,WfEngine engine,String currentAction)&#123;
+            //内部范围uuid
+            String oafdScopeinner = model.getStrMap().get(&quot;oafdScopeinner&quot;);
+            //外部范围uuid
+            String oafdScopeouter = model.getStrMap().get(&quot;oafdScopeouter&quot;);
+            StringBuilder sbUuid = new StringBuilder();
+            StringBuilder sbName = new StringBuilder();
+            String userUuids = &quot;&quot;;
+            String userNames = &quot;&quot;;
+
+            //内部范围
+            if (StringUtils.hasText(oafdScopeinner)) &#123;
+                //根据混合节点，解析用户
+                List&lt;CoreAccount&gt; coreAccounts = pubParseScopeService.parserScopeByMixUuidWithOrder(oafdScopeinner);
+                for (CoreAccount coreAccount : coreAccounts)&#123;
+                    sbUuid.append(coreAccount.getCractUuid()+&quot;,&quot;);
+                    sbName.append(coreAccount.getCractName()+&quot;,&quot;);
+                &#125;
+            &#125;
+            //外部范围
+            if (StringUtils.hasText(oafdScopeouter)) &#123;
+                String[] uuids = oafdScopeouter.split(&quot;,&quot;);
+                for (int i = 0; i &lt; uuids.length; i++) &#123;
+                    String uuid = uuids[i];
+                    CoreOrganization org = new CoreOrganization();
+                    org.setCrorgUuid(uuid);
+                    org = this.getMyBatisDaoManager().get(org,false);
+                    if (org != null)&#123;
+                        //单位
+                        //根据机构的UUID获得机构的配置对象
+                        Map m = pubOrgconfigService.getPubOrgconfig(org.getCrorgUuid());
+                        if (!CollectionUtils.isEmpty(m)) &#123;
+                            // 进行不为null和&quot;&quot;的判断
+                            if (m.get(&quot;FileReceiverUuid&quot;) != null &amp;&amp; !&quot;&quot;.equals(m.get(&quot;FileReceiverUuid&quot;).toString()))&#123;
+                                if (StringUtils.hasText(userUuids))&#123;
+                                    userUuids = userUuids + &quot;,&quot; + m.get(&quot;FileReceiverUuid&quot;).toString();
+                                &#125;else &#123;
+                                    userUuids = m.get(&quot;FileReceiverUuid&quot;).toString();
+                                &#125;
+                            &#125;
+                        &#125;
+                    &#125;
+                &#125;
+                // 进行切割
+                String[] UuidList = userUuids.split(&quot;,&quot;);
+                for (String receiverUuid : UuidList)&#123;
+                    // 遍历
+                    sbUuid.append(receiverUuid+&quot;,&quot;);
+                    CoreAccount coreAccount = new CoreAccount();
+                     // 通过uuid获取账户对象
+                    coreAccount.setCractUuid(receiverUuid);
+                    CoreAccount account = coreAccountService.get(coreAccount);
+                    if (null != account) &#123;
+                        // 进行账户名称追加
+                        sbName.append(account.getCractName()+ &quot;,&quot;);
+                    &#125;
+                &#125;
+            &#125;
+            if (sbUuid.length()&gt;0) &#123;
+                // 根据索引删除指定的字符 &quot;,&quot;
+                userUuids = sbUuid.deleteCharAt(sbUuid.length() - 1).toString();
+            &#125;
+            if (sbName.length()&gt;0) &#123;
+                userNames = sbName.deleteCharAt(sbName.length() - 1).toString();
+            &#125;
+            if (StringUtils.hasText(userUuids))&#123;
+                // 设置发送范围
+                model.setOafdSendscope(userUuids);
+            &#125;
+            if (StringUtils.hasText(userNames))&#123;
+                // 设置发送范围名字
+                model.setOafdSendscopename(userNames);
+            &#125;
+        &#125;
+    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">      - </span><br><span class="line"></span><br><span class="line">- ##### 工作流执行方法</span><br><span class="line"></span><br><span class="line">  - &#96;&#96;&#96;java</span><br><span class="line">    @Override</span><br><span class="line">    	public void doWorkflowExecute(OaFiledispatchZz model) &#123;</span><br><span class="line">    		&#x2F;&#x2F; 当前流程名</span><br><span class="line">    		String applicationName &#x3D; getWorkflowApplicationName(model);</span><br><span class="line">    		if (AppConstant.FILED_IS_PATCH_ZZ.equals(applicationName)) &#123;</span><br><span class="line">    			&#x2F;&#x2F; 流转类型</span><br><span class="line">    			String workflowType &#x3D; model.getStrMap().get(&quot;workflowType&quot;);</span><br><span class="line">    			if (StringUtils.hasText(workflowType)) &#123;</span><br><span class="line">    				&#x2F;&#x2F;当前工作流引擎</span><br><span class="line">    				WfEngine wfEngine &#x3D; model.getWfEngine() &#x3D;&#x3D; null ? this.wfEngineService.getWfEngineByItemUUID(model.getUuid()) : model.getWfEngine();</span><br><span class="line">    				&#x2F;&#x2F; 当前环节名称</span><br><span class="line">    				String activityname &#x3D; wfEngine.getWfengineActivityname();</span><br><span class="line">    				&#x2F;&#x2F; 判断当前环节是否是分管领导审核</span><br><span class="line">    				if (AppConstant.OAFD_CHECKLEADERNAME.equals(activityname)) &#123;</span><br><span class="line">    					&#x2F;&#x2F; 获得当前处理人名称</span><br><span class="line">    					String oafdCheckleadername &#x3D; wfEngine.getWfengineCurusername();</span><br><span class="line">    					String[] names &#x3D; oafdCheckleadername.split(&quot;,&quot;);</span><br><span class="line">    					if (names.length &lt;&#x3D; 1) &#123;</span><br><span class="line">    						&#x2F;&#x2F; 判断领导签发人是否存在</span><br><span class="line">    						if (StringUtils.hasText(model.getOafdSignleader())) &#123;</span><br><span class="line">    							&#x2F;&#x2F; 流程跳转到领导签发</span><br><span class="line">    							model.getStrMap().put(&quot;workflowType&quot;, &quot;workflowRouteToTargetActivity&quot;);</span><br><span class="line">    							model.getStrMap().put(&quot;activityName&quot;, &quot;领导签发&quot;);</span><br><span class="line">    							model.getStrMap().put(&quot;currentAction&quot;, &quot;领导签发&quot;);</span><br><span class="line">    						&#125;</span><br><span class="line">    					&#125;</span><br><span class="line">    				&#125;</span><br><span class="line">    			&#125;else &#123;</span><br><span class="line">    				Assert.notNull(workflowType, &quot;必须指定操作方式workflowtype&quot;);</span><br><span class="line">    			&#125;</span><br><span class="line">    		&#125;</span><br><span class="line">    		super.doWorkflowExecute(model);</span><br><span class="line">    	&#125;</span><br></pre></td></tr></table></figure></code></pre>
+</li>
+</ul>
+</li>
+<li><h5 id="工作流执行之后"><a href="#工作流执行之后" class="headerlink" title="工作流执行之后"></a>工作流执行之后</h5><ul>
+<li><pre><code class="java">@Override
+    protected void wfPostRouteExtendApplication(OaFiledispatchZz model,WfEngine wfengine, String currentAction) &#123;
+        // 获得当前流程名字
+//        String applicationName = getWorkflowApplicationName(model);
+        // 进行流程名字判断
+//        if (AppConstant.FILED_IS_PATCH_ZZ.equals(applicationName)) &#123;
+            // 保存OFFICE文稿
+//            oaAttachmentService.saveOrUpdateOfficeFile(model);
+//        &#125; else &#123;
+//            LOG.error(&quot;未指定相应的工作流&quot;);
+//        &#125;
+        // 获得当前流程名字
+        String workflowApplication = this.getWorkflowApplicationName(model);
+        boolean is = StringUtils.hasText(model.getOafdSubjectos()) &amp;&amp; (StringUtils.hasText(model.getOafdStatus()) &amp;&amp; PubStatusEnum.FLOW_INVALID.getCode().equals(model.getOafdStatus()));
+        if(is)&#123;
+            model.setOafdStatus(PubStatusEnum.FLOW_VALID.getCode());
+        &#125;
+        // 进行流程名字判断
+        if (AppConstant.FILED_IS_PATCH.equals(workflowApplication)) &#123;
+            workflowPostRouteApplicationStandardZz(model, wfengine, currentAction);
+        &#125; else  &#123;
+            LOG.error(&quot;未指定相应的工作流&quot;);
+        &#125;
+    &#125;
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  </span><br><span class="line"></span><br><span class="line">- ###### 其方法调用的自定义方法</span><br><span class="line"></span><br><span class="line">  - &#96;&#96;&#96;java</span><br><span class="line">    private void workflowPostRouteApplicationStandardZz(OaFiledispatchZz model, WfEngine engine, String currentAction) &#123;</span><br><span class="line">    		&#x2F;&#x2F; 当前引擎对象</span><br><span class="line">    		engine &#x3D; wfEngineService.getWfEngineByItemUUID(model.getUuid());</span><br><span class="line">    		&#x2F;&#x2F; 当前活动</span><br><span class="line">    		String currentActivityname &#x3D; engine.getWfengineActivityname();</span><br><span class="line">    		&#x2F;&#x2F; 前续活动</span><br><span class="line">    		String preActivityname &#x3D; engine.getWfenginePreactivityname();</span><br><span class="line">    </span><br><span class="line">    		&#x2F;&#x2F; 如果重新流转，则WfEngine前序处理人设置为流转前的PreWfEngine当前处理人 20170320</span><br><span class="line">    		if (AppConstant.WORKFLOW_REROUTE.equals(model.getStrMap().get(AppConstant.WORKFLOW_TYPE))) &#123;</span><br><span class="line">    &#x2F;&#x2F;			workflowRerouteApplication(model,engine);</span><br><span class="line">    		&#125;</span><br><span class="line">    </span><br><span class="line">    &#x2F;&#x2F;		workflowFinishApplication(model);</span><br><span class="line">    </span><br><span class="line">    		&#x2F;&#x2F; 更新基础信息</span><br><span class="line">    		this.getMyBatisDaoManager().update(model);</span><br><span class="line">    </span><br><span class="line">    		&#x2F;&#x2F; 保存OFFICE文稿</span><br><span class="line">    		oaAttachmentService.saveOrUpdateOfficeFile(model);</span><br><span class="line">    </span><br><span class="line">    		&#x2F;&#x2F; 保留留痕稿</span><br><span class="line">    		if (!AppConstant.END.equals(currentActivityname) &amp;&amp; !AppConstant.CURRENT_ACTION_RETUEN.equals(currentAction)</span><br><span class="line">    				&amp;&amp; !AppConstant.ELECTRONIC_PROOFREADING.equals(preActivityname) &amp;&amp; !AppConstant.PROCESS_RECOVERY.equals(currentAction)) &#123;</span><br><span class="line">    			&#x2F;&#x2F; revisionWord(BaseModel&lt;?&gt; model, String currentActivityname, String currentAction, String type)</span><br><span class="line">    			&#x2F;&#x2F; 保存留痕稿 currentActivityname:当前环节  currentAction:当前执行的动作</span><br><span class="line">    			&#x2F;&#x2F; type:留痕稿类型（9:普通留痕稿类型类型）</span><br><span class="line">    			pubApplicationService.revisionWord(model, preActivityname, currentAction, &quot;9&quot;);</span><br><span class="line">    		&#125;</span><br><span class="line">    </span><br><span class="line">    		&#x2F;&#x2F;返回页面</span><br><span class="line">    		if (model.getStrMap().containsKey(AppConstant.WORKFLOW_TYPE) &amp;&amp; AppConstant.WORKFLOW_CALLBACK.equals(model.getStrMap().get(AppConstant.WORKFLOW_TYPE))) &#123;</span><br><span class="line">    			&#x2F;&#x2F; 判断当前环节是否为workflowCallback</span><br><span class="line">    			model.getStrMap().put(&quot;saveOrSubmit&quot;, AppConstant.NUM_ONE);</span><br><span class="line">    			model.getStrMap().put(&quot;newUrl&quot;, &quot;&#x2F;risen&#x2F;oa&#x2F;filedispatch&#x2F;doWorkflowEdit.action?uuid&#x3D;&quot; + model.getOafdUuid());</span><br><span class="line">    		&#125;</span><br><span class="line">    	&#125;</span><br></pre></td></tr></table></figure>
+
+
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="工作流其他相关方法"><a href="#工作流其他相关方法" class="headerlink" title="工作流其他相关方法"></a>工作流其他相关方法</h4><ul>
+<li><h4 id="该方法提供给工作流删除的时候扩展执行，将会在数据库删除之前执行。"><a href="#该方法提供给工作流删除的时候扩展执行，将会在数据库删除之前执行。" class="headerlink" title="该方法提供给工作流删除的时候扩展执行，将会在数据库删除之前执行。"></a>该方法提供给工作流删除的时候扩展执行，将会在数据库删除之前执行。</h4><ul>
+<li><pre><code class="java">@Override
+    protected void wfDeleteExtendApplication(OaFiledispatchZz model) &#123;
+        super.wfDeleteExtendApplication(model);
+    &#125;
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- #### 该方法主要对工作流消息表的扩展字段进行利用。键值有：&#96;messageTile、wfmessageExpand1、wfmessageExpand2、wfmessageExpand3、wfmessageExpand4、wfmessageExpand5&#96;</span><br><span class="line"></span><br><span class="line">  - &#96;&#96;&#96;java</span><br><span class="line">    @Override</span><br><span class="line">    	protected Map&lt;String, Object&gt; wfMessageExtendApplication(OaFiledispatchZz model) &#123;</span><br><span class="line">    		return super.wfMessageExtendApplication(model);</span><br><span class="line">    	&#125;</span><br></pre></td></tr></table></figure></code></pre>
+</li>
+</ul>
+</li>
+<li><h4 id="该方法主要对工作流提交的意见格式进行自定义。注意：流程回收的时候不执行该方法。自定义的意见格式，默认为-意见-人名-时间。"><a href="#该方法主要对工作流提交的意见格式进行自定义。注意：流程回收的时候不执行该方法。自定义的意见格式，默认为-意见-人名-时间。" class="headerlink" title="该方法主要对工作流提交的意见格式进行自定义。注意：流程回收的时候不执行该方法。自定义的意见格式，默认为 意见+人名+时间。"></a>该方法主要对工作流提交的意见格式进行自定义。注意：流程回收的时候不执行该方法。<code>自定义的意见格式，默认为 意见+人名+时间</code>。</h4><ul>
+<li><pre><code class="java">@Override
+    protected String wfOpinionExtendApplication(OaFiledispatchZz model) &#123;
+        return super.wfOpinionExtendApplication(model);
+    &#125;
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#### 工作流列表相关方法</span><br><span class="line"></span><br><span class="line">- ##### 待处理</span><br><span class="line"></span><br><span class="line">  - &#96;&#96;&#96;java</span><br><span class="line">    @Override</span><br><span class="line">    	public List&lt;OaFiledispatchZz&gt; getPendingList(OaFiledispatchZz model) &#123;</span><br><span class="line">    		Cnd cnd &#x3D; new Cnd();</span><br><span class="line">    &#x2F;&#x2F;		model.setOafdStatus(PubStatusEnum.FLOW_VALID.getCode());</span><br><span class="line">    &#x2F;&#x2F;		cnd.andEquals(&quot;oafdStatus&quot;);</span><br><span class="line">    &#x2F;&#x2F;		if(StringUtils.hasText(model.getStrMap().get(&quot;postType&quot;)))&#123;</span><br><span class="line">    &#x2F;&#x2F;			cnd.orderBy(&quot;oafdFiledraftdate&quot;,&quot;desc&quot;);</span><br><span class="line">    &#x2F;&#x2F;		&#125;</span><br><span class="line">    		model.setCondition(cnd);</span><br><span class="line">    		return this.getMyBatisDaoManager().exeSelectCommand(model, &quot;getPendingList&quot;);</span><br><span class="line">    	&#125;</span><br></pre></td></tr></table></figure></code></pre>
+</li>
+</ul>
+</li>
+<li><h5 id="在处理-1"><a href="#在处理-1" class="headerlink" title="在处理"></a>在处理</h5></li>
+<li><h5 id="已处理"><a href="#已处理" class="headerlink" title="已处理"></a>已处理</h5></li>
+</ul>
+<h4 id="工作流监控操作执行"><a href="#工作流监控操作执行" class="headerlink" title="工作流监控操作执行"></a>工作流监控操作执行</h4><ul>
+<li><pre><code class="java">@Override
+    public void doWorkflowWatchExecute(OaFiledispatchZz model) &#123;
+        // 获得活动类型
+        String workflowType = model.getStrMap().get(&quot;workflowType&quot;);
+        String warning = &quot;操作失败！&quot;;
+        if (workflowType.equals(&quot;workflowBatchDelete&quot;)) &#123;
+            // 批量删除
+            for (String uuid : model.getStrList()) &#123;
+                OaFiledispatchZz bean = new OaFiledispatchZz();
+                bean.setUuid(uuid);// 设置UUID
+                bean = this.getMyBatisDaoManager().exeSelectOneCommand(bean, &quot;getFileBaseOne&quot;);
+                if (bean != null) &#123;
+                    // 删除工作流信息
+                    bean.getStrMap().put(&quot;workflowType&quot;, &quot;workflowDelete&quot;);
+                    // 执行工作流操作
+                    wfEngineService.doWorkflowExecute(bean);
+                    // 流程删除接口
+                    workflowDeleteApplication(bean);
+                &#125;
+            &#125;
+            warning = &quot;处理完成！&quot;;
+        &#125; else if (workflowType.equals(&quot;workflowBatchFinish&quot;)) &#123;
+            for (String uuid : model.getStrList()) &#123;
+                OaFiledispatchZz bean = new OaFiledispatchZz();
+                // 设置UUID
+                bean.setUuid(uuid);
+                bean = this.getMyBatisDaoManager().exeSelectOneCommand(bean, &quot;getFileBaseOne&quot;);
+                if (bean != null) &#123;
+                    // 结束工作流信息
+                    bean.getStrMap().put(&quot;workflowType&quot;, &quot;workflowRouteToTargetActivity&quot;);
+                    bean.getStrMap().put(&quot;activityName&quot;, &quot;结束&quot;);
+                    bean.getStrMap().put(&quot;currentAction&quot;, &quot;结束流程&quot;);
+                    // 执行工作流操作
+                    wfEngineService.doWorkflowExecute(bean);
+                &#125;
+            &#125;
+            warning = &quot;处理完成！&quot;;
+            &#125; else &#123;
+                warning = &quot;找不到对应的处理方法！&quot;;
+            &#125;
+        // 返回处理结果
+        model.getStrMap().put(&quot;warning&quot;, warning);
+    &#125;
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- ###### 其方法调用的自定义方法</span><br><span class="line"></span><br><span class="line">  - &#96;&#96;&#96;java</span><br><span class="line">    public void workflowDeleteApplication(OaFiledispatchZz model) &#123;</span><br><span class="line">    		this.getMyBatisDaoManager().remove(model);</span><br><span class="line">    	&#125;</span><br></pre></td></tr></table></figure>
+
+
+</code></pre>
+</li>
+</ul>
+<h4 id="工作流监控列表相关方法"><a href="#工作流监控列表相关方法" class="headerlink" title="工作流监控列表相关方法"></a>工作流监控列表相关方法</h4><ul>
+<li><h5 id="未完成"><a href="#未完成" class="headerlink" title="未完成"></a>未完成</h5><ul>
+<li><pre><code class="java">@Override
+    public List&lt;OaFiledispatchZz&gt; getAllUnfinishJobList(OaFiledispatchZz model) &#123;
+
+        return this.getMyBatisDaoManager().exeSelectCommand(model, &quot;getAllUnfinishJobList&quot;);
+    &#125;
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  - </span><br><span class="line"></span><br><span class="line">- ##### 已完成</span><br><span class="line"></span><br><span class="line">  - &#96;&#96;&#96;java</span><br><span class="line">    @Override</span><br><span class="line">    public List&lt;OaFiledispatchZz&gt; getAllFinishedJobList(OaFiledispatchZz model) &#123;</span><br><span class="line">    </span><br><span class="line">    		return this.getMyBatisDaoManager().exeSelectCommand(model, &quot;getAllFinishedJobList&quot;);</span><br><span class="line">    	&#125;</span><br></pre></td></tr></table></figure></code></pre>
+</li>
+</ul>
+</li>
+<li><h5 id="回收站"><a href="#回收站" class="headerlink" title="回收站"></a>回收站</h5><ul>
+<li><pre><code class="java">@Override
+    public List&lt;OaFiledispatchZz&gt; getAllRecycleList(OaFiledispatchZz model) &#123;
+        Cnd cnd = new Cnd();
+        cnd.andEquals(&quot;oafdStatus&quot;);
+        model.setOafdStatus(AppConstant.NUM_TWO);
+        model.setCondition(cnd);
+        return this.getMyBatisDaoManager().exeSelectCommand(model, &quot;getAllRecycleList&quot;);
+    &#125;
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">#### 天谷盖章</span><br><span class="line"></span><br><span class="line">&#96;&#96;&#96;java</span><br><span class="line">@Override</span><br><span class="line">	public OaFiledispatchZz getOaFiledispatchByUuid(OaFiledispatchZz model) &#123;</span><br><span class="line">		OaFiledispatchZz bean &#x3D; this.getMyBatisDaoManager().get(model);</span><br><span class="line">		&#x2F;&#x2F; 初始化附件表对象</span><br><span class="line">		OaAttachment attachment &#x3D; new OaAttachment();</span><br><span class="line">		attachment.setMtmBetaUuid(bean.getOafdUuid());</span><br><span class="line">		&#x2F;&#x2F; 根据发文UUID来获取OFFICE附件</span><br><span class="line">		OaAttachment officeFile &#x3D; oaAttachmentService.getOfficeFile(attachment);</span><br><span class="line">		bean.getObjMap().put(&quot;officeFile&quot;, officeFile);</span><br><span class="line">		return bean;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+
+
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="验证核心序号是否使用"><a href="#验证核心序号是否使用" class="headerlink" title="验证核心序号是否使用"></a>验证核心序号是否使用</h4><h5 id="验证规则-filecodefileyear-filecode-fileno"><a href="#验证规则-filecodefileyear-filecode-fileno" class="headerlink" title="验证规则:filecodefileyear+filecode+fileno"></a>验证规则:filecodefileyear+filecode+fileno</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">getCoreSerialNumberIsUsed</span><span class="params">(OaFiledispatchZz model)</span> </span>&#123;</span><br><span class="line">		String returnVal = <span class="string">&quot;unused&quot;</span>;</span><br><span class="line">		String uuid = model.getUuid();</span><br><span class="line">		<span class="comment">// 判断uuid、文件字号、文件年号、文件编号、所属机构uuid不为空或null</span></span><br><span class="line">		<span class="keyword">if</span> (StringUtils.hasText(model.getUuid()) &amp;&amp; StringUtils.hasText(model.getOafdFilecode()) &amp;&amp; StringUtils.hasText(model.getOafdFileyear())</span><br><span class="line">				&amp;&amp; StringUtils.hasText(model.getOafdFileno()) &amp;&amp; StringUtils.hasText(model.getOafdOrguuid())</span><br><span class="line">		) &#123;</span><br><span class="line">			Cnd cnd = <span class="keyword">new</span> Cnd();</span><br><span class="line">			cnd.andEquals(<span class="string">&quot;oafdFileyear&quot;</span>);</span><br><span class="line">			cnd.andEquals(<span class="string">&quot;oafdFilecode&quot;</span>);</span><br><span class="line">			cnd.andEquals(<span class="string">&quot;oafdFileno&quot;</span>);</span><br><span class="line">			cnd.andEquals(<span class="string">&quot;oafdOrguuid&quot;</span>);</span><br><span class="line">			cnd.andEquals(<span class="string">&quot;oafdStatus&quot;</span>);</span><br><span class="line">			model.setOafdStatus(AppConstant.NUM_ONE);</span><br><span class="line">			model.setCondition(cnd);</span><br><span class="line">			List&lt;OaFiledispatchZz&gt; list = <span class="keyword">this</span>.getMyBatisDaoManager().selectModelList(model);</span><br><span class="line">			<span class="keyword">if</span>(!list.isEmpty())&#123;</span><br><span class="line">				<span class="keyword">if</span>(list.size()==<span class="number">1</span> &amp;&amp; list.get(<span class="number">0</span>).getUuid().equals(uuid))&#123;</span><br><span class="line">					<span class="comment">// 仅有一条数据切uuid相等 则没被使用</span></span><br><span class="line">					returnVal = <span class="string">&quot;unused&quot;</span>;</span><br><span class="line">				&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">					<span class="comment">// 若有多条数据则没被使用</span></span><br><span class="line">					returnVal = <span class="string">&quot;used&quot;</span>;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> returnVal;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="未了解"><a href="#未了解" class="headerlink" title="未了解"></a>未了解</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> OaFiledispatchZz <span class="title">getFormInfo</span><span class="params">(OaFiledispatchZz model)</span> </span>&#123;</span><br><span class="line">   <span class="comment">/*获取模版信息*/</span></span><br><span class="line">   <span class="comment">// 初始化模板配置对象</span></span><br><span class="line">   PubTemplate pubTemplate = <span class="keyword">new</span> PubTemplate();</span><br><span class="line">   <span class="comment">// set模板类型</span></span><br><span class="line">   pubTemplate.setPubftlFiletype(<span class="string">&quot;0&quot;</span>);</span><br><span class="line">   <span class="comment">// set模板应用模块</span></span><br><span class="line">   pubTemplate.setPubftlApplicationtype(<span class="string">&quot;FILEDISPATCH&quot;</span>);</span><br><span class="line">   <span class="comment">// set模板名称</span></span><br><span class="line">   pubTemplate.setPubftlName(model.getStrMap().get(<span class="string">&quot;ftlName&quot;</span>));</span><br><span class="line">   <span class="comment">// 通过名字获取模板对象</span></span><br><span class="line">   PubTemplate template = pubTemplateService.getTemplateByName(pubTemplate);</span><br><span class="line">   <span class="keyword">if</span>(template != <span class="keyword">null</span>)&#123;</span><br><span class="line">      model.getObjMap().put(<span class="string">&quot;template&quot;</span>, template);</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="keyword">return</span> model;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 选择模板</span></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> List&lt;OaFiledispatchZz&gt; <span class="title">getAllWorkflowList</span><span class="params">(OaFiledispatchZz model)</span> </span>&#123;</span><br><span class="line">		<span class="comment">// 获取到DB的数据  通过名字：getAllTemplateList</span></span><br><span class="line">		List&lt;OaFiledispatchZz&gt; beans =  <span class="keyword">this</span>.getMyBatisDaoManager().exeSelectCommand(model,<span class="string">&quot;getAllWorkflowList&quot;</span>);</span><br><span class="line"></span><br><span class="line">		<span class="keyword">return</span> beans;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+
+
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        Author:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">John Doe</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        Link:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://yoursite.com/2020/09/05/%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%AE%80%E8%BF%B0/">http://yoursite.com/2020/09/05/%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%AE%80%E8%BF%B0/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        Reprint policy:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    All articles in this blog are used except for special statements
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    reprint polocy. If reproduced, please indicate source
+                    <a href="/about" target="_blank">John Doe</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>Copied successfully, please follow the reprint policy of this article</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">more</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            <span class="chip bg-color">No tag</span>
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
+            <div class="card">
+                <a href="/2020/09/05/%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%AE%80%E8%BF%B0/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="工作流简述">
+                        
+                        <span class="card-title">工作流简述</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Action相关方法
+工作流启动
+@Override
+    public String doWorkflowStartup() &#123;
+        // TODO Auto-generated method stub
+     
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-05
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            John Doe
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/08/30/hello-world/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        
+                        <span class="card-title">Hello World</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-30
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            John Doe
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;TOC</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2019</span>
+            <a href="/about" target="_blank">John Doe</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1181062873@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1181062873" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1181062873" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;Search</span>
+            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/search.xml", 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
